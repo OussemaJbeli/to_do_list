@@ -1,0 +1,40 @@
+@media (max-width:900px){
+    /**************************hour_pic*****************/
+    .hourglass{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    .glass_icon1{
+        height: 70%;
+    }
+}
+@media (max-width:500px){
+    .body{
+        flex-direction: column;
+        height: 100%;
+    }
+    /***************************tasks*****************/
+    .tasks{
+        height: 70vh;
+        width: 100vw;
+    }
+    /**************************hour_pic*****************/
+    .hourglass{
+        height: 30%;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .glass_icon1{
+        position: absolute;
+        visibility: hidden;
+    }
+    .glass_icon2{
+        visibility: visible;
+        position: initial;
+        height: 100vw;
+        transform-origin:50% 40%;
+        transform: rotate(90deg);
+    }
+}

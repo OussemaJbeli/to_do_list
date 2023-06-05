@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --done_task_color:#454343;
+    --main_color:#1671b5;
+    --main_font:cursive;
+    --task_color:linear-gradient(0deg,#9ec3ef,#cde0ff);
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 25px;
+    background-image: var(--task_color);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 25px;
+    background-color: var(--main_color);
+}
+body{
+    background-image: url("../icons/bg_quick_list.jpg");
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: 0vw 0vw;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*************************************************taske*********************************************/
+.task_frame{
+    height: 80%;
+    width: 30%;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    transition: 0.4s ease;
+}
+/*******************************add tasks form*********************/
+form{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#task_val{
+    height: 100%;
+    width: 75%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main_color);
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    font-family: var(--main_font);
+}
+#save_task{
+    height: 100%;
+    width: 20%;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--main_color);
+    color: #fff;
+    font-family: var(--main_font);
+}
+/**************************tasks***************************/
+.taskes_panel{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+/*******************workon panel****************/
+.work_one{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.task,.task_done{
+    width: 100%;
+    padding: 5%;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main_color);
+    background-color: var(--main_color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.4s ease;
+}
+.task .tesk_value,.task_done .tesk_value{
+    font-size: 15px;
+    font-family: cursive;
+    color: #fff;
+    width: 500%;
+}
+.task .chek_task,.task_done .chek_task{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.DELETE{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+}
+.DELETE img{
+    width: 90%;
+}
+.DELETE img:hover{
+    transform: scale(1.1);
+}
+.empty_task{
+    height: 30%;
+    width: 30%;
+}
+.empty_task img{
+    width: 100%;
+}
+/*************************done _task**************/
+.done{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.done p{
+    font-family: var(--main_font);
+    color: #000;
+    font-size: 1.2vw;
+}
+.done .task_done{
+    background-color: var(--done_task_color);
+}
+/*****************************remove or resort****************/
+.add_cat_frame{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000088;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.add_cat_panel{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main_color);
+    height: 30%;
+    width: 30%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+.exit{
+    height: 20%;
+    border-style: solid;
+    border-radius: 100%;
+    border-color: var(--main_color);
+    background-color: var(--main_color);
+    transition: 0.4s ease;
+}
+.exit img{
+    height: 100%;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+}
+.exit:hover{
+    transform: scale(1.1);
+    background-color: #ee4242;
+}
+.add_cat_panel form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#cat_val{
+    color: var(--main_color);
+    font-family: var(--main_font);
+    font-size: 1.5vw;
+    height:20%;
+}
+.butons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height:40%;
+    width: 100%;
+}
+#delete_cat,#resort_cat{
+    border-style: solid;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--main_color);
+    color: #fff;
+    font-family: var(--main_font);
+    width: 30%;
+    height: 70%;
+}
+#delete_cat{
+    background-color: red;
+}
+#resort_cat{
+    background-color: var(--main_color);
+}
